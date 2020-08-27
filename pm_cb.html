@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zopa</title>
+    <script type="text/javascript">
+        var data;
+        if (window.location.search.length > 0) {
+            data = window.location.search;
+        } else {
+            data = window.location.hash;
+        }
+        window.parent.postMessage({ data: data }, window.location.origin);
+    </script>
+</head>
+<body>
+</body>
+</html>
