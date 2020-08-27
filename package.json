@@ -1,5 +1,6 @@
 {
   "name": "auth-test-tpp",
+  "homepage": "http://rorydpayne.github.io/auth-test-tpp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -10,8 +11,10 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "auth0-js": "^9.13.4",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "typescript": "~3.7.2"
   },
@@ -19,7 +22,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -35,5 +40,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/auth0-js": "^9.13.4",
+    "@types/react-router-dom": "^5.1.5",
+    "gh-pages": "^3.1.0"
   }
 }
