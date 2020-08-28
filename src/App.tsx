@@ -27,7 +27,7 @@ const App: FunctionComponent<any> = () => {
         clientID: process.env.REACT_APP_CLIENT_ID!,
         scope: process.env.REACT_APP_SCOPE!,
         responseType: 'id_token token',
-        redirectUri: window.location.origin,
+        redirectUri: process.env.REACT_APP_PUBLIC_URL!,
         overrides: {
             __token_issuer: `https://${process.env.REACT_APP_AUTH_DOMAIN}/oauth`
         }
@@ -73,7 +73,7 @@ const App: FunctionComponent<any> = () => {
 
     const login = () => webAuth.authorize();
 
-    const logout = () => webAuth.logout({returnTo: window.location.origin});
+    const logout = () => webAuth.logout({returnTo: process.env.REACT_APP_PUBLIC_URL!});
 
     const silentLogin = () => webAuth.renewAuth({
         redirectUri: `${process.env.REACT_APP_PUBLIC_URL}/pm_cb.html`
