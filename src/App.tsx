@@ -28,6 +28,7 @@ const App: FunctionComponent<any> = () => {
         scope: process.env.REACT_APP_SCOPE!,
         responseType: 'id_token token',
         redirectUri: process.env.REACT_APP_PUBLIC_URL!,
+        jwksURI: `https://${process.env.REACT_APP_AUTH_DOMAIN}/oauth/.well-known/openid-configuration/jwks`,
         overrides: {
             __token_issuer: `https://${process.env.REACT_APP_AUTH_DOMAIN}/oauth`
         }
