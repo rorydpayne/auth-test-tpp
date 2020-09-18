@@ -30,11 +30,13 @@ const App: FunctionComponent<any> = () => {
         redirectUri: process.env.REACT_APP_PUBLIC_URL!,
         jwksURI: `https://${process.env.REACT_APP_AUTH_DOMAIN}/oauth/.well-known/openid-configuration/jwks`,
         overrides: {
-            __token_issuer: `https://${process.env.REACT_APP_AUTH_DOMAIN}/oauth`
+            __token_issuer: `https://${process.env.REACT_APP_AUTH_DOMAIN}/oauth`,
+            __jwks_uri: `https://${process.env.REACT_APP_AUTH_DOMAIN}/oauth/.well-known/openid-configuration/jwks`,
         }
     });
 
     const handleAuthParams = useCallback(() => {
+        console.log("Parsing auth params");
         const queryParams = qs.parse(window.location.hash, {ignoreQueryPrefix: true}) as AuthParams;
         webAuth.parseHash((error: null | Auth0Error, decoded: null | Auth0DecodedHash) => {
             setState({
@@ -53,6 +55,7 @@ const App: FunctionComponent<any> = () => {
     }, [webAuth, setState]);
 
     const checkAuth = useCallback(() => {
+        console.log("Checking user auth state");
         webAuth.renewAuth({
             redirectUri: `${process.env.REACT_APP_PUBLIC_URL}/pm_cb.html`,
         }, (error: null | Auth0Error, result: any) => {
@@ -65,6 +68,9 @@ const App: FunctionComponent<any> = () => {
     }, [webAuth, setState]);
 
     useEffect(() => {
+        if (state.authenticated) {
+            return;
+        }
         if (window.location.hash.indexOf("access_token") >= 0) {
             handleAuthParams();
         } else if (state.authenticated === null) {
