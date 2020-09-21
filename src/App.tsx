@@ -98,13 +98,13 @@ const App: FunctionComponent<any> = () => {
     if (state.authenticated) {
         return (<div>
             <p>Logged In</p>
-            <button onClick={logout}>Log Out</button>
+            <button id="logout" onClick={logout}>Log Out</button>
             <span> </span>
-            <button onClick={silentLogin}>Silent Login</button>
-            <p>token: {state.token}</p>
+            <button id="refresh" onClick={silentLogin}>Silent Login</button>
+            <p id="token">token: {state.token}</p>
         </div>);
     }
-    return <button onClick={login}>Login</button>;
+    return <button id="login" onClick={login}>Login</button>;
 };
 
 export default App;
