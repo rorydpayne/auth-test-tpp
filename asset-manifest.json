@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/auth-test-tpp/static/js/main.a825282a.chunk.js",
-    "main.js.map": "/auth-test-tpp/static/js/main.a825282a.chunk.js.map",
+    "main.js": "/auth-test-tpp/static/js/main.c1190fda.chunk.js",
+    "main.js.map": "/auth-test-tpp/static/js/main.c1190fda.chunk.js.map",
     "runtime-main.js": "/auth-test-tpp/static/js/runtime-main.3c0b3da3.js",
     "runtime-main.js.map": "/auth-test-tpp/static/js/runtime-main.3c0b3da3.js.map",
     "static/js/2.310b51c1.chunk.js": "/auth-test-tpp/static/js/2.310b51c1.chunk.js",
     "static/js/2.310b51c1.chunk.js.map": "/auth-test-tpp/static/js/2.310b51c1.chunk.js.map",
     "index.html": "/auth-test-tpp/index.html",
-    "precache-manifest.a290ea3969568d1ddc2cce955a987e15.js": "/auth-test-tpp/precache-manifest.a290ea3969568d1ddc2cce955a987e15.js",
+    "precache-manifest.71983ad3cd1b2ef12c84def62816d202.js": "/auth-test-tpp/precache-manifest.71983ad3cd1b2ef12c84def62816d202.js",
     "service-worker.js": "/auth-test-tpp/service-worker.js",
     "static/js/2.310b51c1.chunk.js.LICENSE.txt": "/auth-test-tpp/static/js/2.310b51c1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.3c0b3da3.js",
     "static/js/2.310b51c1.chunk.js",
-    "static/js/main.a825282a.chunk.js"
+    "static/js/main.c1190fda.chunk.js"
   ]
 }
